@@ -1,0 +1,9 @@
+[Core]
+Name = Gaussian Fit
+Module = gaussian_plugin
+
+[Documentation]
+Author = Caleb
+Version = 1.0
+Website = None
+Description = A plugin which integrates over one axis of the cloud and then fits a gaussian profile

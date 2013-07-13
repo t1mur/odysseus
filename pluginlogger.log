@@ -1,0 +1,7 @@
+2012-09-18 15:47:59,765 DEBUG PluginManager walks into directory: C:\PixelFly\odysseus\plugins
+2012-09-18 15:47:59,812 DEBUG PluginManager found a candidate:                                   C:\PixelFly\odysseus\plugins\fourier_plugin.odysseus-plugin
+2012-09-18 15:47:59,828 DEBUG PluginManager found a candidate:                                   C:\PixelFly\odysseus\plugins\gaussian_plugin.odysseus-plugin
+2012-09-18 15:47:59,858 DEBUG PluginManager found a candidate:                                   C:\PixelFly\odysseus\plugins\launch_ipython_plugin.odysseus-plugin
+2012-09-18 15:47:59,875 DEBUG PluginManager found a candidate:                                   C:\PixelFly\odysseus\plugins\lineprofile_plugin.odysseus-plugin
+2012-09-18 15:47:59,890 DEBUG PluginManager found a candidate:                                   C:\PixelFly\odysseus\plugins\radavg_plugin.odysseus-plugin
+2012-09-18 15:47:59,905 DEBUG PluginManager found a candidate:                                   C:\PixelFly\odysseus\plugins\texreport_plugin.odysseus-plugin

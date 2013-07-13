@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+
+<file alias="icon.png">resources/python-crystal.png</file>
+<file alias="blankimg.png">resources/blankimg.png</file>
+<file alias="splashscreen.png">resources/splashscreen.png</file>
+
+</qresource>
+</RCC>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction &mdash; Odysseus v0.4.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.4.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Odysseus v0.4.1 documentation" href="index.html" />
+    <link rel="next" title="Theory" href="theory.html" />
+    <link rel="prev" title="Overview" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="theory.html" title="Theory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Overview"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Odysseus v0.4.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference" href="">Introduction</a><ul>
+<li><a class="reference" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference" href="#work-environment">Work environment</a></li>
+<li><a class="reference" href="#fitting-an-image">Fitting an image</a></li>
+<li><a class="reference" href="#how-to-get-good-results">How to get good results</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="index.html" title="previous chapter">Overview</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="theory.html" title="next chapter">Theory</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/introduction.txt">Show Source</a></li>
+            </ul>
+          <h3>Quick search</h3>
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+      </div>
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This is the documentation for Odysseus, the fitting program for Fermionic cold atom clouds.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Odysseus is written in <a class="reference" href="http://python.org">Python</a> and requires a few Python libraries to run. The most important ones are <a class="reference" href="http://scipy.org/NumPy">Numpy</a> (for fast numerics), <a class="reference" href="http://scipy.org/">Scipy</a> (for fitting routines etc) and <a class="reference" href="http://matplotlib.sourceforge.net/">Matplotlib</a> (for plotting). On Windows, a fully functional environment can be obtained simply by installing the <a class="reference" href="http://enthought.com/products/epd.php">Enthought Python Distribution</a> (EPD). <a class="reference" href="http://www.sagemath.org/">Sage</a> should work as well, but this has not yet been tested. On Linux, all libraries can be installed through the package manager on the most common distributions.</p>
+</div>
+<div class="section" id="work-environment">
+<h2>Work environment<a class="headerlink" href="#work-environment" title="Permalink to this headline">¶</a></h2>
+<p>The most efficient way of using Odysseus is to write small scripts, that define the image(s) you want to fit, and then to run these scripts from the command line. Standard Python works fine, but nicer is to use the <a class="reference" href="http://ipython.scipy.org/moin/">IPython</a> interpreter. IPython and a nice editor of your choice can be used in the same way as you would use Matlab for interactive data analysis. A typical interactive session looks like this:</p>
+<a class="reference image-reference" href="_images/interactive_python.jpg"><img alt="_images/interactive_python.jpg" src="_images/interactive_python.jpg" style="width: 500pt;" /></a>
+<p>In order to be able to run data analysis scripts from any directory, it is essential that the Python interpreter knows where to find the Odysseus modules. This requires setting the environment variable PYTHONPATH to include the Odysseus directory. For Windows XP this can be done via <em>My Computer &gt; Properties &gt; Advanced (tab) &gt; Environment Variables</em> and on Linux by defining PYTHONPATH in a shell startup rc file (.bashrc for example). To make sure this worked you can type <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$PYTHONPATH</span></tt> in a terminal.</p>
+</div>
+<div class="section" id="fitting-an-image">
+<h2>Fitting an image<a class="headerlink" href="#fitting-an-image" title="Permalink to this headline">¶</a></h2>
+<p>Once everything is set up we can test if it all works. To do this we need the example script below and an image. Both can be found in the Odysseus source directory.</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></td><td class="code"><div class="highlight"><pre><span class="k">import</span> <span class="nn">os</span>
+<span class="k">from</span> <span class="nn">fit_thermal_fermions</span> <span class="k">import</span> <span class="n">fit_img</span>
+
+<span class="c">#dirname = &#39;../../../archives/2008-05-27/&#39;</span>
+<span class="n">dirname</span> <span class="o">=</span> <span class="s">&#39;c:</span><span class="se">\\</span><span class="s">Data</span><span class="se">\\</span><span class="s">2008-05-27&#39;</span>
+
+<span class="c">## this is how to fit a single image ##</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s">&#39;6msTOF.TIF&#39;</span>
+<span class="n">img_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+<span class="n">fit_img</span><span class="p">(</span><span class="n">img_name</span><span class="p">,</span> <span class="n">odmax</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">showfig</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Open a terminal, go to the Odysseus source directory and start ipython there (simply type &#8220;ipython -pylab&#8221; at the promt and press enter. Then run the script by typing &#8220;run example_fit.py&#8221;.</p>
+</div>
+<div class="section" id="how-to-get-good-results">
+<h2>How to get good results<a class="headerlink" href="#how-to-get-good-results" title="Permalink to this headline">¶</a></h2>
+<p>There are some things to keep in mind when you want a reliable temperature fit. First of all, it is very important that the image is as clean as possible (few fringes). This can be achieved by cleaning optical surfaces, by aperturing the imaging beam to limit backreflections, by angling optical surfaces, and by using a short optical path length after the imaging fiber.</p>
+<p>Other things that can be done are:</p>
+<ul class="simple">
+<li>use ROI with size at least two or three times the cloud size (otherwise we get normalization errors, or cut off significant parts of the data)</li>
+<li>for ROI, stay away from regions with no light and image edge by at least 20 pixels</li>
+<li>use images with a central OD between ~ 1 and 2.8</li>
+<li>results are not sensitive to TOF or cutoff OD when the above is done (check!)</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="theory.html" title="Theory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Overview"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Odysseus v0.4.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2008-2009, Ralf Gommers.
+      Last updated on Mar 04, 2009.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.5.1.
+    </div>
+  </body>
+</html>
